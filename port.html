@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="portstyle.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p style="margin-top: 90px;">Bachelor of Engineering</p>
+            <h1>Hi, I'am<span> Sasi</span> </h1>
+        </div>
+    </div>
+<div id="about">
+<div><h1 class="sub-title">
+    About Me </h1>
+    <p>Disciplined and passionate beginner ready to dive into the world of coding.
+        Proficient in Javascript. I bring a quick learner's mindset tothe forefront,
+        eager to adapt and contribute to innovative web solutions. Let's build the 
+        futue of the web together !</p>
+
+        <div class="tab-title">
+            <p class ="tab-links active-link " onclick="opentab('skills')" >Skills</p>
+            <p class ="tab-links" onclick="opentab('project')" >Internship</p>
+            <p class ="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li>
+                    <span>Web Development</span><br>Designing or Creating  a interactive  Web Page</li>
+                <li><span>JAVA</span><br>Basics in Java</li>
+                <li><span>MYSQL</span><br> Database Management</li>
+                <li><span>EXPRESS</span><br>backend</li>
+                <li><span>REACT</span><br>Frontend</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="project">
+            <ul>
+                <li><span> Webdevelopment </span><br>Learned how to develop a Websiteusing HTML and CSS</li>
+                <li><span> Python</span><br>Learned basics of JAVA</li>
+            </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+            <ul>
+                <li><span>2021-2025</span><br>B-E Computer Science and Engineering<br>CGPA:8.28</li>
+                <li><span>2020-2021</span><br>12th Class <br>Percentage:88</li>
+                <li><span>2018-2019</span><br>10th Class<br>Percentage:85</li>
+            </ul>
+        </div>
+</div>
+</div>
+
+
+</div>
+
+<!-- -----------------services----------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services </h1>
+        <div class="service-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>full stack</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div>
+                <h2>database</h2>
+                <p>mysql</p>
+                <a href="#" >Learn More</a>
+            </div>
+
+            <div>
+                <h2>Programming</h2>
+                <p>java,c </p>
+                <a href="#" >Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------portfolio------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Project</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/ecr (2).png" alt="">
+                <div class="layer">
+                    <h3>Report Management System </h3>
+                    <p>It is a full-stack web application designed to  providing a solution for
+                        organizing, generating, and accessing reports .</p>
+                        <a href="#">More</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/insta.png" alt="">
+                <div class="layer">
+                    <h3>Instagram UI </h3>
+                    <p>Developed a clone of the Instagram UI</p>
+                        <a href="#">More</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+</div>
+<!-- ----------------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> Mail_id:sundaresansasi2004@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sasi-sundaresan/">Linkedin</a>
+                     <a href="https://github.com/Sasi-sundaresan">Github</a>
+                </div>
+            </div>
+            <!-- <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Your Email" required>
+                    <textarea name="Message" rows="6"placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                    
+                </form>
+            </div> -->
+        </div>
+    </div>
+</div> 
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
